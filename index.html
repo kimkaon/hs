@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <link rel="shortcut icon" href="ig/캡처.ico" type="image/x-icon">
-<link rel="icon" href="ig/캡처.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--모든 웹페이지에 페이지 너비를 화면에 맞게 1.0확대/축소를 해 로드-->
-    <link rel="stylesheet" href="d.css">
-    <title>구리고등학교 계시판</title>
-    <h1 class="h1">구리고 이달의 소식</h1>
-    <a href="http://guri.hs.kr/" target="_blank">
-        <img src="ig/캡처.PNG" alt="구리고등학교" class="mk">
+    <link rel="icon" href="ig/캡처.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="d.css">  <!--이 html의 스타일 부분을 d.css에 연결시킨다-->
+    <title>구리고등학교 계시판</title>  <!--웹사이트 제목 설정-->
+    <h1 class="h1">구리고 이달의 소식</h1> <!--h1형식으로 제목 넣기 css클래스:h1-->
+    <a href="http://guri.hs.kr/" target="_blank"> <!--클릭하면 링크로 가게 만들기-->
+        <img src="ig/캡처.PNG" alt="구리고등학교" class="mk">  <!--이미지 캡쳐.png를 찾기 대체:구리고등학교  css클래스:mk-->
     </a>
 </head>
 <body>
- <div class="bk">
+ <div class="bk"> <!--백그라운드의 회색부분을 만들기 위한 div-->
     <group>
-<img src="ig/대지.png" alt="이미지를 찾을 수 없습니다" class=pp1 >
- <p class=pp1>안녕하세요. 구리고입니다</p>
+<img src="ig/대지.png" alt="이미지를 찾을 수 없습니다" class=pp1  > <!--이미지 찾고 css클래스:pp1로 정렬및 디자인-->
+ <p class=pp1>안녕하세요. 구리고입니다</p>  <!--p로 글자를 넣고 css클래스:pp1으로 디자인및 정렬-->
    </group>
 
-<div>
- <img src="ig/sddefault.jpg" alt="이미지를 찾을 수 없습니다" class=pp1 >
-<p class=pp1 >안녕하세요. 구리고입니다</p>
-</div>
+<group>
+ <img src="ig/sddefault.jpg" alt="이미지를 찾을 수 없습니다" class=pp1  > <!--이미지 찾고 css클래스:pp1로 정렬및 디자인-->
+<p class=pp1 >안녕하세요. 구리고입니다</p> <!--p로 글자를 넣고 css클래스:pp1으로 디자인및 정렬-->
+</group>
+</group>
 
-<div>
-<img src="ig/1_1691404103.png" alt="이미지를 찾을 수 없습니다" class=pp1 >
-<p class=pp1>안녕하세요. 구리고입니다</p>
+<group>
+<img src="ig/1_1691404103.png" alt="이미지를 찾을 수 없습니다" class=pp1  > <!--이미지 찾고 css클래스:pp1로 정렬및 디자인-->
+<p class=pp1>안녕하세요. 구리고입니다</p> <!--p로 글자를 넣고 css클래스:pp1으로 디자인및 정렬-->
+</group>
+</group>
+
 </div>
 <script>
     //알림 권한 요청
     function getNotificationPermission() {
-        // 브라우저 지원 여부 체크
-        if (!("Notification" in window)) {
-            alert("데스크톱 알림을 지원하지 않는 브라우저입니다.");
+        if (!("Notification" in window)) {  // 윈고우의 브라우저에서 지원 하는지 체크
+            alert("데스크톱 알림을 지원하지 않는 브라우저입니다."); 
         }
         // 데스크탑 알림 권한 요청
         Notification.requestPermission(function (result) {
-            // 권한 거절
-            if(result == 'denied') {
-                Notification.requestPermission();
-                alert('알림을 차단하셨습니다.\n브라우저의 사이트 설정에서 변경하실 수 있습니다.');
-                return false;
+            if(result == 'denied') {   //만약 권한을 거절한다면
+                Notification.requestPermission(); //알림 권한을 용청한다
+                alert('알림을 차단하셨습니다. /n브라우저의 사이트 설정에서 변경하실 수 있습니다.'); //메세지 생성
+                return false; //다시 반복하지 않는다
             }
         });
     }
-    new Notification("구리고 계시판에 오신 것을 환영합니다", {body:'여기에서는 여러가지 행사 소식등등을 접할 수 있으며 행사에 대한 이벤트도 많이많이 참여해 주세요'});
+    new Notification("구리고 계시판에 오신 것을 환영합니다", {body:'여기에서는 여러가지 행사 소식등등을 접할 수 있으며 행사에 대한 이벤트도 많이많이 참여해 주세요'}); //메지시 생성
 </script>
-</div>
+
 </body>
 </html>
